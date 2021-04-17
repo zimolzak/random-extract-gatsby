@@ -30,4 +30,10 @@ with open('64317-h.htm', "r") as file:
                 L = L.replace(k, v)
             PARAGRAPHS.append(L)
 
-print(PARAGRAPHS)
+# print(''.join(PARAGRAPHS))
+N = random.randint(0, len(PARAGRAPHS) - 1)
+PASSAGE = ''
+while len(PASSAGE) < 250:
+    PASSAGE += PARAGRAPHS[N]
+    N += 1
+print(PASSAGE)
