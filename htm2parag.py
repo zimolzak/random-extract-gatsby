@@ -9,5 +9,9 @@ with open('64317-h.htm', "r") as file:
             continue
         if '<p>' in L or '</p>' in L:
             continue
+        if L[0] == '<':
+            continue
+        if len(L) == 1:
+            continue
         if printing:
             print(L, end='')
