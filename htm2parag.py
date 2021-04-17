@@ -1,3 +1,11 @@
+replacements = {'&mdash;': '---',
+                '<i>':'',
+                '</i>':'',
+                '<br/>':'',
+                '<b>':'',
+                '</b>':'',
+                }
+
 with open('64317-h.htm', "r") as file:
     printing = False
     for L in file:
@@ -14,4 +22,6 @@ with open('64317-h.htm', "r") as file:
         if len(L) == 1:
             continue
         if printing:
+            for k, v in replacements.items():
+                L = L.replace(k, v)
             print(L, end='')
