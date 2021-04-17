@@ -1,10 +1,14 @@
-replacements = {'&mdash;': '---',
+import random
+
+REPLACEMENTS = {'&mdash;': '---',
                 '<i>':'',
                 '</i>':'',
                 '<br/>':'',
                 '<b>':'',
                 '</b>':'',
                 }
+
+PARAGRAPHS = []
 
 with open('64317-h.htm', "r") as file:
     printing = False
@@ -22,6 +26,8 @@ with open('64317-h.htm', "r") as file:
         if len(L) == 1:
             continue
         if printing:
-            for k, v in replacements.items():
+            for k, v in REPLACEMENTS.items():
                 L = L.replace(k, v)
-            print(L, end='')
+            PARAGRAPHS.append(L)
+
+print(PARAGRAPHS)
