@@ -1,11 +1,17 @@
 import random
 
-REPLACEMENTS = {'&mdash;': '---',
+REPLACEMENTS = {'&mdash;': ', ', # I don't wanna learn minus/hyphen
                 '<i>':'',
                 '</i>':'',
                 '<br/>':'',
                 '<b>':'',
                 '</b>':'',
+                '!':'.', # don't want to learn
+                '“':'', # open quote
+                '”':'', # close quote
+                '’':'', # curly apostrophe
+                ';':'',
+
                 }
 
 PARAGRAPHS = []
