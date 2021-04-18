@@ -11,7 +11,7 @@ REPLACEMENTS = {'&mdash;': ', ', # I don't wanna learn minus/hyphen
                 '”':'', # close quote
                 '’':'', # curly apostrophe
                 ';':'',
-
+                '…':'',
                 }
 
 PARAGRAPHS = []
@@ -42,4 +42,10 @@ PASSAGE = ''
 while len(PASSAGE) < 250:
     PASSAGE += PARAGRAPHS[N]
     N += 1
+print()
+print('----')
+print()
 print(PASSAGE)
+print()
+print('----')
+print()
