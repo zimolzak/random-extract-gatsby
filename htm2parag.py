@@ -10,8 +10,9 @@ REPLACEMENTS = {'&mdash;': ', ', # I don't wanna learn minus/hyphen
                 '“':'', # open quote
                 '”':'', # close quote
                 '’':'', # curly apostrophe
-                ';':'',
+                ';':'.',
                 '…':'',
+                ':':',',
                 }
 
 PARAGRAPHS = []
@@ -37,11 +38,13 @@ with open('64317-h.htm', "r") as file:
             PARAGRAPHS.append(L)
 
 # print(''.join(PARAGRAPHS))
+
 N = random.randint(0, len(PARAGRAPHS) - 1)
 PASSAGE = ''
 while len(PASSAGE) < 250:
     PASSAGE += PARAGRAPHS[N]
     N += 1
+
 print()
 print('----')
 print()
